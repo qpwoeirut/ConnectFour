@@ -31,23 +31,25 @@ def get_input():
 
 def make_move(col, color):
   for r in reversed(range(ROWS)):
-    if board[r][col] == 'E':
-      board[r][col] == color
+    if board[r][col] == EMPTY:
+      board[r][col] = color
+      return
+  assert False, f"{col} {color}"
 
 
 def main():
   print("Welcome to Connect Four!")
 
-  moves = 0
-  while moves < ROWS * COLUMNS:
+  for move in range(ROWS * COLUMNS):
     for row in board:
       print(' '.join(row))
     col = get_input()
 
-    if moves % 2 == 0:
+    if move % 2 == 0:
       make_move(col, PLAYER_ONE)
     else:
       make_move(col, PLAYER_TWO)
+    
 
     
 
