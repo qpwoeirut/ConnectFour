@@ -1,5 +1,5 @@
 ROWS = 6
-COLUMNS = 8
+COLUMNS = 7
 
 EMPTY = '.'
 PLAYER_ONE = 'B'
@@ -108,7 +108,7 @@ def main():
 
   if not check_winner(PLAYER_ONE) and not check_winner(PLAYER_TWO):
     print("Draw.")
-    
+
   print_board()
     
     
