@@ -106,6 +106,9 @@ def main():
         print("Player two wins!")
         break
 
+  if not check_winner(PLAYER_ONE) and not check_winner(PLAYER_TWO):
+    print("Draw.")
+    
   print_board()
     
     
